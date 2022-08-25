@@ -1,0 +1,97 @@
+table {
+  margin: auto;
+  width: 95%;
+  margin-top: 10px;
+
+}
+th{
+  font-weight: 900;
+  color: black;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+.text-left{
+  text-align: left;
+}
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+  font-weight: 400;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+.attribution-delete{
+  color: red;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.attribution-delete:hover{
+  cursor: pointer;
+}
+
+
+.mat-form-field {
+  margin: auto;
+  width: 90%;
+}
+
+.search-section{
+  margin-top: 20px;
+  text-align: center;
+}
+
+mat-paginator{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.text{
+  width: 50%;
+}

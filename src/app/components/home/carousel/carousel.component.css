@@ -1,0 +1,25 @@
+mat-grid-tile {
+    margin: 0 12%;
+    padding: 100px;
+}
+
+.default {
+    background: rgb(248, 248, 248);
+}
+.black{
+    background: black;
+    color: #ffffff;
+}
+.calm {
+    background-image: url('/assets/images/2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+mat-icon{
+    cursor: pointer;
+}
+.carousel{
+    margin-top: 30px;
+}

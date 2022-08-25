@@ -1,0 +1,25 @@
+.card{
+    background: transparent;
+    border: none;
+}
+.calm{
+    background-image: url('/assets/images/2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% ;  
+    background-size: cover;
+    color: white;
+  }
+  
+  .calm , .default p{
+      padding-top: 100px;
+  }
+  
+  .default{
+    background: white;
+  }
+  
+  .calm , .default{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+  }

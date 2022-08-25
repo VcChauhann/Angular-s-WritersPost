@@ -1,0 +1,32 @@
+<div class="bootstrap-wrapper">
+    <div class="container text-center">
+        <mat-tab-group class="mt-20">
+            <mat-tab label="Login">
+                <div class="col-md-10 col-sm-12 mt-20">
+                    <form (ngSubmit)="onSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>userName</mat-label>
+                            <input [(ngModel)]="credentials.username" name="username" type="text" matInput />
+                        </mat-form-field>
+                        
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Enter your password</mat-label>
+                            <input [(ngModel)]="credentials.password" name="password" matInput [type]="hidePassword ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                              <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                          </mat-form-field>
+                        <div class="text-center container">
+                            <button type="submit" mat-raised-button color="primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+            </mat-tab>
+            <mat-tab label="SignUp"> 
+                <app-register></app-register>
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+</div>

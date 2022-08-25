@@ -1,0 +1,25 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="1" class="text-length" [rowspan]="1" [style.background]="'transparent'">
+        {{textWritten.length?"words "+textWritten.length:null}}
+    </mat-grid-tile>
+    <mat-grid-tile class="right-align" [colspan]="2" [rowspan]="1" [style.background]="'transparent'">
+        <button *ngIf="textWritten.length <= 0" mat-button matTooltip="Save to device" disabled>
+            <mat-icon class="example-icon" aria-hidden="false" (click)="downloadText()"
+                aria-label="Example user verified icon">download</mat-icon>
+        </button>
+        <button *ngIf="textWritten.length > 0" mat-button matTooltip="Save to device" >
+            <mat-icon class="example-icon" aria-hidden="false" (click)="downloadText()"
+                aria-label="Example user verified icon">download</mat-icon>
+        </button>
+    </mat-grid-tile>
+    <mat-grid-tile class="right-align" [colspan]="1" [rowspan]="1" [style.background]="'transparent'">
+        <button *ngIf="textWritten.length <= 0" mat-button matTooltip="Reset" disabled >
+            <mat-icon class="example-icon" aria-hidden="false" (click)="resetTextArea()"
+                aria-label="Example user verified icon">refresh</mat-icon>
+        </button>
+        <button *ngIf="textWritten.length > 0" mat-button matTooltip="Reset">
+            <mat-icon class="example-icon" aria-hidden="false" (click)="resetTextArea()"
+                aria-label="Example user verified icon">refresh</mat-icon>
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>

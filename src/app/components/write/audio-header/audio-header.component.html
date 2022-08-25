@@ -1,0 +1,36 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="3" class="text-length" [rowspan]="1" [style.background]="'transparent'">
+
+        <audio *ngIf="isAudioPlaying" controls autoplay loop>
+            <source id="music" src="{{audioBeingPlayed}}" type="audio/ogg">
+            <source src="{{audioBeingPlayed}}" type="audio/mpeg">
+        </audio>
+        <button mat-button disabled>
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                arrow_left</mat-icon>
+        </button>
+        <button mat-button (click)="isAudioPlaying=!isAudioPlaying">
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                pause</mat-icon>
+            <mat-icon *ngIf="!isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">play_arrow</mat-icon>
+        </button>
+
+        <button mat-button disabled>
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                arrow_right</mat-icon>
+        </button>
+
+    </mat-grid-tile>
+    <mat-grid-tile class="right-align" [colspan]="1" [rowspan]="1" [style.background]="'transparent'">
+        <button mat-button>
+            <mat-icon *ngIf="loggedIn" (click)="saveContent()" class="example-icon" aria-hidden="false" aria-label="Example user verified icon">
+                save
+            </mat-icon>
+        </button>
+    </mat-grid-tile>
+
+</mat-grid-list>

@@ -1,0 +1,55 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    
+    <!-- Theme Selection -->
+
+    <mat-grid-tile class="right-align" [colspan]="1" [rowspan]="1" [style.background]="'transparent'">
+        <mat-form-field class="{{selected}}-dropdown" appearance="outline">
+            <mat-label>Selected Theme</mat-label>
+            <mat-select [(value)]="selected">
+
+                <mat-option (click)="selectedTheme()" value="default">default</mat-option>
+                <mat-option (click)="selectedTheme()" value="dark">dark</mat-option>
+                <mat-option (click)="selectedTheme()" value="calm">calm</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </mat-grid-tile>
+
+    <!-- Audio Section -->
+    <mat-grid-tile [colspan]="2" class="text-length" [rowspan]="1" [style.background]="'transparent'">
+        <audio *ngIf="isAudioPlaying" controls autoplay loop>
+            <source id="music" src="{{audioBeingPlayed}}" type="audio/ogg">
+            <source src="{{audioBeingPlayed}}" type="audio/mpeg">
+        </audio>
+        <button mat-button disabled>
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                arrow_left</mat-icon>
+        </button>
+        <button mat-button (click)="isAudioPlaying=!isAudioPlaying">
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                pause</mat-icon>
+            <mat-icon *ngIf="!isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">play_arrow</mat-icon>
+        </button>
+
+        <button mat-button disabled>
+            <mat-icon *ngIf="isAudioPlaying" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                arrow_right</mat-icon>
+        </button>
+
+    </mat-grid-tile>
+
+    <!-- Save button  -->
+    <mat-grid-tile class="right-align" [colspan]="1" [rowspan]="1" [style.background]="'transparent'">
+        <button mat-button>
+            <mat-icon *ngIf="loggedIn" (click)="saveContent()" class="example-icon" aria-hidden="false"
+                aria-label="Example user verified icon">
+                save
+            </mat-icon>
+        </button>
+    </mat-grid-tile>
+
+</mat-grid-list>

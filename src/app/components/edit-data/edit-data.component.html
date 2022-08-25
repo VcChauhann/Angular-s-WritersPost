@@ -1,0 +1,8 @@
+<div class="writing-box {{name}}">
+    <app-edit-header  (updateTheme)="themeUpdating($event)" (saveTextField)="saveContentToDB()" [isAudioPlaying]="theme.isPlaying" [audioBeingPlayed]="audio"></app-edit-header>
+
+    <textarea class="{{name}}" autofocus [(ngModel)]="editableData.text" placeholder="Start typing ..."></textarea>
+
+    <app-footer (updateTextField)="resetTextField($event)" [textWritten]="editableData.text"></app-footer>
+
+</div>
